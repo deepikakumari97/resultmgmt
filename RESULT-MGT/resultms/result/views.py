@@ -7,9 +7,13 @@ def home(request):
     if request.POST.get('rollno') is not None:
         try:
             student = Student.objects.get(rollNo=request.POST.get('rollno').lower())
-            print(student)
+            print(student.name)
+            print(student.rollNo)
             context = {
-                'Student': student,
+                'Name': student.name,
+                'Rollno': student.rollNo,
+                'Branch': student.branch,
+                'Semester': student.semester,
                 'Results': Result.objects.filter(student=student)
             }
         except Student.DoesNotExist:
