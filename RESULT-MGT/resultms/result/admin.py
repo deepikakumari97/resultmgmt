@@ -10,6 +10,7 @@ class ResultsInline(admin.TabularInline):
 class StudentAdmin(admin.ModelAdmin):
     search_fields = ['name','rollNo']
     list_display = ('name', 'rollNo','branch', 'semester')
+    list_display_links =['rollNo']
     list_filter = ['branch','semester']
     inlines = [ResultsInline]
 
