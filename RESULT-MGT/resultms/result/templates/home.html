@@ -1,0 +1,10 @@
+
+<form method="POST" action="/">
+    {% csrf_token %}
+    <input type="text" name="rollno">
+    <input type="submit" value="check your result">
+    
+</form>
+
+{{ Student.name }}
+{{ ERROR }}
