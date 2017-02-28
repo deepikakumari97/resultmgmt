@@ -10,10 +10,7 @@ def home(request):
             print(student.name)
             print(student.rollNo)
             context = {
-                'Name': student.name,
-                'Rollno': student.rollNo,
-                'Branch': student.branch,
-                'Semester': student.semester,
+                'Student': student,
                 'Results': Result.objects.filter(student=student)
             }
         except Student.DoesNotExist:

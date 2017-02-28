@@ -1,0 +1,619 @@
+body {
+	margin:0 auto;
+	height: 200px;
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #CBE32D , #F3FAB6); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left, red, yellow); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left, red, yellow); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #FFFFCC , #FFFF66); /* Standard syntax (must be last) */
+}
+header {
+	height:100px;
+    background-color:#1f1f1f;
+    color:#fff;
+    text-align:center;
+    padding:5px;
+}
+
+
+a{
+	text-decoration: none;
+}
+
+header > .top {
+	float:left;
+	margin-left:125px;
+	padding:10px;
+}
+header > h1 > a {
+	color:#fff;
+}
+
+header > a > .logo {
+	width:100px;
+	height:80px;
+}
+
+header > h1 {
+	float:right;
+	height:100px;
+	line-height:100px;
+	white-space:nowrap;
+	padding-right:125px;
+	font:2.5em 'segoe_script';
+	
+}
+
+section > .slider{
+	width:1100px;
+	height:300px;
+	margin:0 auto;
+	margin-bottom: 100px;
+}
+
+section > .slider > .slide.fade > .img{
+	width:1100px;
+	height:300px;
+	margin:0 auto;
+	border-radius: 6px;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .2}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .2}
+  to {opacity: 1}
+}
+
+.note {
+  position: relative;
+  width: 960px;
+	height: 140px;
+  padding: 1em 1.5em;
+  margin: 0 auto;
+  color: #fff;
+	text-align: center;
+	font:3em "georgia", serif;
+  background: #97C02F;
+  overflow: hidden;
+}
+
+.note:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-width: 0 48px 48px 0;
+  border-style: solid;
+  border-color: #fff #ffff66 #658E15 #658E15;
+  background: #658E15;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 5px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+  /* Firefox 3.0 damage limitation */
+  display: block; width: 0;
+}
+
+.note.rounded {
+  -moz-border-radius: 5px 0 5px 5px;
+  border-radius: 5px 0 5px 5px;
+}
+
+.note.rounded:before {
+  border-width: 8px;
+  border-color: #fff #fff transparent transparent;
+  -moz-border-radius: 0 0 0 5px;
+  border-radius: 0 0 0 5px;
+}
+
+
+section > .note > .buttons{
+	padding-top: 40px;
+	word-spacing: 100px;
+}
+
+.button {
+    background-color: #558000;
+    border: none;
+	border-radius: 3px;
+    color: #fff;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+	font:20px "georgia", serif;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+	background-color: white;
+    color: black;
+    width: 150px;
+    border: 3px solid #558000;
+	align-content: center;
+}
+
+.button:hover {
+    background-color: #558000;
+    color: white;
+}	
+
+article.event
+{
+	position: relative;
+	float:left;
+	width: 50%;
+	margin-top: 40px;
+}
+
+article > .update {
+	margin-left: 123px;
+	padding: 2px 0 10px 20px;
+	height: 60px;
+    background: #1f1f1f;
+    box-shadow:
+        0 1px 1px rgba(0,0,0,0.5),
+        0 10px 0 -5px #1f1f1f,
+        0 10px 1px -4px rgba(0,0,0,0.5),
+        0 20px 0 -10px #1f1f1f,
+        0 20px 1px -9px rgba(0,0,0,0.5);
+}
+
+article > .update > h2 {
+	font:1.7em 'Arial', 'Helvetica', sans-serif;
+	font-weight: 600;
+	color: #fff;	
+}
+
+article > .update {
+	margin-bottom: 40px;
+	
+}
+
+
+@font-face {
+   font-family: segoe_script;
+   src: url(font/segoe_script.ttf);
+}
+
+@font-face {
+   font-family: Helvetica_Neue;
+   src: url(font/Helvetica_Neue.ttf);
+}
+
+article > .updates > h3 {
+	font:1.7em 'Arial', 'Helvetica', sans-serif;
+	font-weight: 600;
+	color: #000;
+}
+article > .updates {
+	margin-left: 123px;
+	
+	margin-top: 5px;
+	
+	
+}
+
+article > .updates > img {
+	width:150px;
+	height:150px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	margin: 20px 30px;
+}
+
+article > section {
+	background:#333;
+	border: 2px inset #202020;
+	
+}
+
+article > .updates > p {
+	height: 110px;
+	width: 46%;
+	margin: 10px 30px;
+	padding: 12px;
+	float: right;
+	text-align: justify;
+	font:1em 'Helvetica_Neue';
+	color: #f2f2f2;
+}
+article > .updates > p > a {
+	width:130px;
+	text-align: left;
+	text-decoration: none;
+	color: #97c02f;
+	font:1.125em 'Tahoma', 'Geneva', sans-serif;
+	font-weight: 600;
+	position: relative;
+	top: 35px;
+	display: block;
+}
+
+aside
+{
+	position:relative;
+	width: 40%;
+	float:right;
+	margin-top: 40px;
+}
+
+aside > .contact{
+	
+	margin-right: 122px;
+	padding:10px;
+	background:#333;
+	
+}
+aside > .mailing{
+
+	margin-right: 122px;
+	margin-top: 20px;
+	padding:10px;
+	padding-bottom: 10px;
+	background:#333;
+	text-align: center;
+	
+}
+aside > .contact > h4, aside > .mailing > h4 {
+	text-align: center;
+	font:1.7em 'Arial', 'Helvetica', sans-serif;
+	font-weight: 300;
+	color: #fff;
+}
+
+aside > .contact > p, aside > .mailing > p{
+	font:1em 'Tahoma', 'Geneva', sans-serif;
+	color:#c8c8c8;
+	line-height:1em;
+	padding:0px 50px;
+}
+
+aside > .contact > p> span, aside > .mailing > p > span{
+	font:1.25em 'Tahoma', 'Geneva', sans-serif;
+	color:#fff;
+	padding: 0px 0px 30px 0px;
+	display: block;
+}
+
+aside > .mailing > form > input[type=email] {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: #c5c3c3;
+    color: #fff;
+}
+
+aside > .mailing > form > input[type=submit] {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: #97c02f;
+    color: #fff;
+	cursor:pointer;
+}
+aside > .mailing > form{
+	margin:auto;
+	
+}
+aside > .contact > p > a > img {
+	width:25px;
+	height:25px;
+	padding: 5px;
+}
+
+
+
+
+
+/* Full-width input fields */
+section > .note > .buttons > .modal > form > .container > input[type=text],
+section > .note > .buttons > .modal > form > .container > input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+section > .note > .buttons > .modal > form > .container > button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+	font-weight: 600;
+}
+		
+section > .note > .buttons > .modal > form > .container > label{
+	float: left;
+	color: #000;
+	font: 1.2em 'lato', sans-serif;
+	font-weight: 300;
+	vertical-align: text-bottom;
+}
+
+section > .note > .buttons > .modal > form > .container > input{
+	margin-bottom:20px;
+	line-height: 0em;
+}
+
+
+
+/* Center the image and position the close button */
+section > .note > .buttons > .modal > form > .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+section > .note > .buttons > .modal > form > .imgcontainer > img.avatar {
+    width: 30%;
+    border-radius: 50%;
+}
+
+
+section > .note > .buttons > .modal > form > .container > a{
+	color: #000;
+	float: right;
+}
+
+section > .note > .buttons > .modal > form > .container > a > span{
+	cursor: default;
+}
+
+section > .note > .buttons > .modal > form > .container{
+	 padding: 16px;
+	color: #000;
+	font: .35em 'lato', sans-serif;
+	word-spacing: normal;
+	text-align: left;
+}
+
+
+/* The Modal (background) */
+section > .note > .buttons > .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; 
+	background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 20px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 30%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+section > .note > .buttons > .modal > form > .imgcontainer > .close {
+    position: absolute;
+    right: 5px;
+	bottom: 122px;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+section > .note > .buttons > .modal > form > .imgcontainer > .close:hover,
+section > .note > .buttons > .modal > form > .imgcontainer > .close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+section > .note > .buttons > .modal > .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+footer{
+	background-color:#1f1f1f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	font: normal 18px sans-serif;
+	color:#fff;
+	padding: 25px;
+	margin-top: 450px;
+	text-align:center;
+}
+
+footer > .name{
+	color:  #8d9093;
+	font-size: 24px;
+	margin: 0;
+}
+
+footer > .copyright{
+	color:  #8f9296;
+	font-size: 14px;
+	margin: 0;
+}
+
+footer > .link{
+	list-style: none;
+	font-weight: bold;
+	color:  #ffffff;
+	padding: 35px 0 23px;
+	margin: 0;
+}
+
+footer > .link > a{
+	display:inline-block;
+	text-decoration: none;
+	color: inherit;
+}
+footer > p > a{
+	color:#fff;
+}
+
+
+aside.recent
+{
+	position:relative;
+	width: 20%;
+	height: 265px;
+	float:left;
+	background:#333;
+	margin-left:123px;
+	margin-top: -40px;
+	border: 1px solid #000;
+}
+
+aside.recent h3, aside.news h3{
+	text-align: center;
+	font: 1.5em 'segoe_script';
+	text-decoration: underline;
+}
+
+ 
+
+aside.news
+{
+	position:relative;
+	margin-left:123px; 
+	width: 20%;
+	height: 265px;
+	float:left;
+	margin-top: 40px;
+	border: 1px solid #000;
+	background:#333; 
+}
+
+section.panel
+{
+	position:relative;
+	width: 650px;
+	right: 20px;	
+	height: 525px;
+	float:right;
+	margin-right:123px;
+	margin-top: -40px;
+	margin-bottom: 30px;
+	padding:0 50px 50px;
+	border: 1px solid #000;
+	background:#333;
+}
+
+
+section.panel h3 {
+	padding-bottom:30px;
+	text-align: center;
+	font: 2em 'segoe_script';
+}
+
+article.comment{
+	position:relative;
+	margin-left:123px;
+	width: 1081px;
+	float:left;
+}
+
+section.panel a{
+	display: block;
+	font:1.4em 'Helvetica_Neue';
+	color:#0d0d0d;
+	line-height: 48px;
+}
+
+
+section input{
+	float: right;
+}
+
+aside span{
+	display:block;
+	font:1.4em 'Helvetica_Neue';
+	padding-left: 25px;
+	
+}
+
+article form fieldset textarea{
+	float: right;
+}
+
+article form fieldset input{
+	display: inline-block;
+}
+
+article > form > fieldset > input[type=submit] {
+    width: 10%;
+    padding: 8px 20px;
+    margin: 8px 0;
+	margin-left: 55px;
+    box-sizing: border-box;
+    border: 1px solid #14559f;
+    background-color: #196cca;
+    color: #fff;
+	cursor:pointer;
+}
+
+article > form > fieldset > input[type=email] {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 8px;
+    box-sizing: border-box;
+    border:1px solid #c1c1c1;
+    background-color: #f3f2f2;
+    color: #fff;
+	text-align: center;
+}
+
+article > form > fieldset > textarea {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 8px;
+    box-sizing: border-box;
+    border: 1px solid #c1c1c1;
+    background-color: #f3f2f2;
+    color: #000;
+}
+
+article > form > fieldset > legend{
+font: normal 20px sans-serif;
+}
+
+section.profile{
+	position:relative;
+	width: 1100px;
+	height: 265px;
+	float:left;
+	margin:0 123px;
+	border: 1px solid #000;
+}

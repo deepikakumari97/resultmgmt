@@ -1,14 +1,161 @@
+{% load static %}
 
-<form method="POST" action="/">
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{% static 'result/style.css' %}"/>
+</head>
+<body>
+
+<header>
+<a class="top" href="#home"><img src="{% static 'result/img/dtu_logo.png' %}" alt="Result Management" class="logo"></a>
+	<h1><a href="#home">RESULT MANAGEMENT SYSTEM</a></h1>
+</header>
+
+	
+<section>
+
+	<div class="slider">
+		<div class="slide fade"><img src="{% static 'result/img/1.jpg' %}" class="img"></div>
+		<div class="slide fade"><img src="{% static 'result/img/2.jpg' %}" class="img"></div>
+		<div class="slide fade"><img src="{% static 'result/img/3.jpg' %}" class="img"></div>
+		<div class="slide fade"><img src="{% static 'result/img/4.jpg' %}" class="img"></div>
+	</div>
+	<div>
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+	</div>
+	
+</section>	
+<form method="POST" style="-webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s;background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 30%; /* Could be more or less, depending on screen size */" action="/">
     {% csrf_token %}
-    <input type="text" name="rollno">
-    <input type="submit" value="check your result">
-    
-</form>
+    <div class="imgcontainer" style="text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;">
+      <span onclick="document.getElementById('login').style.display='none'" class="close" style=" position: absolute;
+    right: 5px;
+	bottom: 122px;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;" title="Close Modal"></span>
+      
+    </div>
 
-{{ Name }}
-{{Rollno}}
-{{Branch}}
-{{Semester}}
-{{Results}}
-{{ ERROR }}
+    <div class="container" style=" padding: 16px;
+	color: #000;
+	font: .35em 'lato', sans-serif;
+	word-spacing: normal;
+	text-align: left;">
+      <label style="float: left;
+	color: #000;
+	font: 4.2em 'lato', sans-serif;
+	font-weight: 300;
+	vertical-align: text-bottom;">University Roll Number</label>
+      <input type="text" placeholder="Enter Roll Number" name="uname" required style="width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom:20px;
+	line-height: 0em;float: right;">      
+      <button type="submit" style="background-color: #4CAF50;
+    color: #fff;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+	font-weight: 600;">Login</button>
+		
+    </div>
+      
+
+      
+  </form>
+
+
+	<table style="width:50%; align-content: " >
+  <tr>
+    <th>Semester</th>
+    <th>Subject</th>
+    <th>Grade</th>
+  </tr>
+  {% for entry in Results %}
+  <tr>
+      <td>{{ Student.semester }}</td>
+      <td>{{ entry.subject.title }}</td>
+      <td>{{ entry.grade }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+	
+	
+
+<footer>
+
+			<p class="name">RESULT MANAGEMENT SYSTEM</p>
+
+			<p class="links">
+				<a href="#">Home</a>
+				
+				<a href="#">About</a>
+				
+				<a href="#">Faq</a>
+			
+				<a href="#">Contact</a>
+			</p>
+
+			
+
+		</footer>
+	
+<script>
+// Get the modal
+var modal = document.getElementById('login');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+	
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("slide");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000);
+}
+</script>
+
+</body>
+</html>
+
+
+
+
