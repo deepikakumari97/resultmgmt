@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<header>
+<a class="top" href="#home"><img src="img/logo.png" alt="Author's Point" class="logo"></a>
+	<h1><a href="#home">RESULT MANAGEMENT SYSTEM</a></h1>
+</header>
+	
+<section>
+
+	<div class="slider">
+		<div class="slide fade"><img src="img/1.jpg" class="img"></div>
+		<div class="slide fade"><img src="img/2.jpg" class="img"></div>
+		<div class="slide fade"><img src="img/3.jpg" class="img"></div>
+		<div class="slide fade"><img src="img/4.jpg" class="img"></div>
+	</div>
+	<div>
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+	</div>
+	
+</section>	
+
+<section>
+
+	<div class="note">Click here to proceed to result.
+		<div class=buttons>
+			<button class="button" onclick="document.getElementById('login').style.display='block'">RESULT</button>
+			<div id="login" class="modal">
+  
+  <form class="modal-content animate" method="POST" action="/">
+      {% csrf_token%}
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img/user.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label>University Roll Number</label>
+      <input type="text" placeholder="Enter Roll Number" name="uname" required>
+      <button type="submit">Login</button>
+    </div>
+      
+
+      
+  </form>
+</div>
+		</div>
+	</div>
+	
+	
+</section>
+	
+
+	
+<aside>
+	<div class="contact">
+		<h4>Connect with us</h4>
+		<p>Contact us for discrepancies with result.</p>
+		<p>TEL:</p>
+		<p><span>9211420420</span></p>
+		<p>MAIL:</p>
+		<p><span>result2k16@uni.com</span></p>
+		<p>FOLLOW US ON:</p>
+		<p><a href="#facebook"><img src="img/facebook.png"></a>
+		<a href="#linkedin"><img src="img/linkedin.png"></a>
+		<a href="#twitter"><img src="img/twitter.png"></a>
+			<a href="#youtube"><img src="img/youtube.png"></a></p>
+	</div>
+	
+</aside>	
+
+<footer>
+
+			<p class="name">RESULT MANAGEMENT SYSTEM</p>
+
+			<p class="links">
+				<a href="#">Home</a>
+				
+				<a href="#">About</a>
+				
+				<a href="#">Faq</a>
+			
+				<a href="#">Contact</a>
+			</p>
+
+			<p class="copyright">DGH08 	&copy; 2016-2017</p>
+
+		</footer>
+	
+<script>
+// Get the modal
+var modal = document.getElementById('login');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+	
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("slide");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000);
+}
+</script>
+
+</body>
+</html>
+
