@@ -3,7 +3,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="{% static 'result/style.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'result/bootstrap.min.css' %}"/>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+</style>
 </head>
 <body>
 
@@ -29,72 +35,36 @@
 	</div>
 	
 </section>	
-<form method="POST" style="-webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s;background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #888;
-    width: 30%; /* Could be more or less, depending on screen size */" action="/">
+
+<form method="POST" action="/">
     {% csrf_token %}
-    <div class="imgcontainer" style="text-align: center;
-    margin: 24px 0 12px 0;
-    position: relative;">
-      <span onclick="document.getElementById('login').style.display='none'" class="close" style=" position: absolute;
-    right: 5px;
-	bottom: 122px;
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;" title="Close Modal"></span>
-      
-    </div>
+    <input type="text" name="rollno">
+    <input type="submit" value="Show my Result">
+</form>
 
-    <div class="container" style=" padding: 16px;
-	color: #000;
-	font: .35em 'lato', sans-serif;
-	word-spacing: normal;
-	text-align: left;">
-      <label style="float: left;
-	color: #000;
-	font: 4.2em 'lato', sans-serif;
-	font-weight: 300;
-	vertical-align: text-bottom;">University Roll Number</label>
-      <input type="text" placeholder="Enter Roll Number" name="uname" required style="width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    margin-bottom:20px;
-	line-height: 0em;">      
-      <button type="submit" style="background-color: #4CAF50;
-    color: #fff;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-	font-weight: 600;">Login</button>
-		
-    </div>
-      
+{% if Student %}
+<p>Name : {{Student.name}}<br>
+Roll no :{{Student.rollNo}}<br>
+Branch : {{Student.branch}}<br>
+Semester : {{Student.semester}}<br>
+</p>
+{% endif %}
 
-      
-  </form>
-
-
-	<table style="width:50%; align-content: center " >
+{% if Results %}
+<table style="width:50%; align-content: center " >
   <tr>
-    <th>Semester</th>
+  
     <th>Subject</th>
     <th>Grade</th>
   </tr>
   {% for entry in Results %}
   <tr>
-      <td>{{ Student.semester }}</td>
       <td>{{ entry.subject.title }}</td>
       <td>{{ entry.grade }}</td>
   </tr>
   {% endfor %}
 </table>
+{% endif %}
 
 	
 	
