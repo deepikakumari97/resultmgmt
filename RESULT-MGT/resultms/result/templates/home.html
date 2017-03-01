@@ -48,6 +48,9 @@ Roll no :{{Student.rollNo}}<br>
 Branch : {{Student.branch}}<br>
 Semester : {{Student.semester}}<br>
 </p>
+{% else %}
+<p>
+{{ ERROR }}</p>
 {% endif %}
 
 {% if Results %}
