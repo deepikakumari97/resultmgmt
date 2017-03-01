@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class Student(models.Model):
     name = models.CharField(max_length=30, blank=True, null=True)
-    rollNo = models.CharField(max_length=30, blank=True, null=True)
+    rollNo = models.CharField(max_length=30, unique=True, blank=True, null=True)
     branch = models.CharField(max_length=30, blank=True, null=True)
     semester = models.IntegerField()
 
